@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul{
+  list-style-type: none;
+  padding:0;
+}
+h1{
+  text-decoration: underline;
+}
+.strikethrough{
+  text-decoration: line-through;
+}
+#standard-basic-textbox{
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+#submit-button{
+  margin-top: 2rem;
+}
+.todo-item{
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}

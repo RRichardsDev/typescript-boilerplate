@@ -12,15 +12,16 @@ app.use(express.json());
 // app.use(cors);
 app.use(express.urlencoded({ extended: false}));
 
+let globalI = 0;
 app.get('/test', (req, res)=>{
-  console.log('/test');
+  globalI++;
   const someValue = 'some data';
-  // res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  return res.status(200).send(someValue);
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  return res.status(200).send({someValue: globalI});
 });
 
 app.listen(port, host, () => {
-  console.log("Server")
+  console.log(`Started server on: ${port}`)
 });
 
 
